@@ -1,12 +1,13 @@
 #include "Account.h"
 
-Account::Account(std::string accountid, std::string customerid, std::string InterestRate, std::string Balance, std::string Type)
+Account::Account(std::string accountid,Customer cus,string user,string password, TypeAccount type)
 {
 	this->accountid = accountid;
-	this->customerid = customerid;
-	this->InterestRate = InterestRate;
-	this->Balance = Balance;
-	this->Type = Type;
+	this->customer = cus;
+	this->username = user;
+	this->pass = password;
+	this->type = type;
+	
 }
 
 void Account::setAccountID(std::string accountid)
@@ -14,52 +15,42 @@ void Account::setAccountID(std::string accountid)
 	Account::accountid = accountid;
 }
 
-void Account::setCustomerID(std::string customerid)
-{
-	Account::customerid = customerid;
-}
 
-void Account::setInterestRate(std::string InterestRate)
-{
-	Account::InterestRate = InterestRate;
-}
-
-void Account::setBalance(std::string Balance)
-{
-	Account::Balance = Balance;
-}
-void Account::setType(std::string Type)
-{
-	Account::Type = Type;
-}
-
-std::string Account::getAccountID() const
+std::string Account::getAccountID() 
 {
 	return accountid;
 }
 
-std::string Account::getCustomerID() const
+
+std::string Account::getPassWord() 
 {
-	return customerid;
+	return this->pass;
 }
-std::string Account::getInterestRate() const
+
+std::string Account::getUsername() 
 {
-	return InterestRate;
+	return username;
 }
-std::string Account::getBalance() const
+
+void Account::setPass(string newPass)
 {
-	return Balance;
+	this->pass = newPass;
 }
-std::string Account::getType() const
-{
-	return Type;
-}
+
 
 std::string Account::toString()
 {
-	return "\nAccountID: " + accountid +
-		"\tCustomer ID: " + customerid +
-		"\Interest Rate: " + InterestRate +
-		"\tBalance " + Balance +
-		"\tType: " + Type;
+	return "\n\tAccountID: " + accountid +
+		"\n\t"+customer.toString()+
+		"\n\t"+type.toString();
+}
+
+TypeAccount Account::getType()
+{
+	return type;
+}
+
+Customer Account::getCustomer()
+{
+	return customer;
 }

@@ -1,20 +1,20 @@
 #pragma once
 #include<vector>
 #include <iostream>
-#include "Account.h"
-class ManagerAdmin
+#include "ManagerAccount.h"
+#include "PrintLog.h"
+class ManagerAdmin :public ManagerAccount 
 {
 private:
-	std::vector<Customer> ListCustomer;
-	bool checkDataList(std::string customerid);
 public:
 	ManagerAdmin();
-	void showlistCustomer();
-	void findCustomer();
-	void addCustomer();
-	void editCustomer();
-	void deleteCustomer();
-	void gotomain();
+	ManagerAccount::addcount;
+	void showListInforAccount();
+	void showListInforAccount(string idCus);
+	void withdrawal();
+	void transfersMoney();
+	void depositMoney();
+	ManagerAccount::editAccount;
 	void PrintLOG();
 };
 

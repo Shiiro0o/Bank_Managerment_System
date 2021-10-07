@@ -1,18 +1,19 @@
 #include "Customer.h"
 
-Customer::Customer(std::string id, std::string name, std::string address, std::string phone, std::string email)
+Customer::Customer()
 {
-	this->customerid = customerid;
+	//defaul contructor
+}
+
+Customer::Customer(std::string customerID, std::string name, std::string address, std::string phone, std::string email)
+{
+	this->cusID = customerID;
 	this->name = name;
 	this->address = address;
 	this->phone = phone;
 	this->email = email;
 }
 
-void Customer::setCustomerID(std::string accountid)
-{
-	Customer::customerid = customerid;
-}
 
 void Customer::setName(std::string name)
 {
@@ -32,15 +33,16 @@ void Customer::setEmail(std::string email)
 	Customer::email = email;
 }
 
+void Customer::setCusID(std::string newID)
+{
+	this->cusID = newID;
+}
+
 std::string Customer::getName() const
 {
 	return name;
 }
 
-std::string Customer::getCustomerID() const
-{
-	return customerid;
-}
 std::string Customer::getAddress() const
 {
 	return address;
@@ -56,9 +58,14 @@ std::string Customer::getEmail() const
 
 std::string Customer::toString()
 {
-	return "\nCustomer ID: " + customerid +
-		"\tName: " + name +
-		"\tAddress: " + address +
-		"\tPhone: " + phone +
-		"\tEmail: " + email;
+	return "customerID: "+cusID+
+		"\n\tName: " + name +
+		"\n\tAddress: " + address +
+		"\n\tPhone: " + phone +
+		"\n\tEmail: " + email;
+}
+
+std::string Customer::getCusID()
+{
+	return cusID;
 }

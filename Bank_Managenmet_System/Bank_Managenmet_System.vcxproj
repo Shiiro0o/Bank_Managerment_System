@@ -142,18 +142,20 @@
     <ClCompile Include="Account.cpp" />
     <ClCompile Include="Customer.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ManageAll.cpp" />
     <ClCompile Include="ManagerAdmin.cpp" />
-    <ClCompile Include="ManagerAll.cpp" />
-    <ClCompile Include="ManagerCustomer.cpp" />
-    <ClCompile Include="Print.cpp" />
+    <ClCompile Include="ManagerAccount.cpp" />
+    <ClCompile Include="PrintLog.cpp" />
+    <ClCompile Include="TypeAccount.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
     <ClInclude Include="Customer.h" />
+    <ClInclude Include="ManageAll.h" />
     <ClInclude Include="ManagerAdmin.h" />
-    <ClInclude Include="ManagerAll.h" />
-    <ClInclude Include="ManagerCustomer.h" />
-    <ClInclude Include="Print.h" />
+    <ClInclude Include="ManagerAccount.h" />
+    <ClInclude Include="PrintLog.h" />
+    <ClInclude Include="TypeAccount.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

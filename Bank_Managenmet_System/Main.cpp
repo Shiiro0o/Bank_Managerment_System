@@ -1,8 +1,8 @@
 #include <iostream>
-#include "ManagerAll.h"
+#include "ManageAll.h"
 using namespace std;
 int main() {
-	ManagerAll all;
+	ManageAll all;
 	all.Wellcome();
-
+	
 }
