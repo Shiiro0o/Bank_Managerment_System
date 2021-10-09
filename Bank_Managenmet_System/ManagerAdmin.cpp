@@ -11,7 +11,7 @@ ManagerAdmin::ManagerAdmin()
 
 void ManagerAdmin::showListInforAccount()
 {
-	ifstream fileInput("F:/HUBT/project/Data.txt");
+	//ifstream fileInput("F:/HUBT/project/Data.txt");
 	for (int i = 0; i < listAccount.size(); i++) {
 		cout << listAccount[i].toString() << endl;
 	}
@@ -19,7 +19,7 @@ void ManagerAdmin::showListInforAccount()
 
 void ManagerAdmin::showListInforAccount(string idCus)
 {
-	ifstream fileInput("F:/HUBT/project/Data.txt");
+	//ifstream fileInput("F:/HUBT/project/Data.txt");
 	for (int i = 0; i < listAccount.size(); i++) {
 		if (listAccount[i].getCustomer().getCusID()==idCus)
 		{
@@ -231,6 +231,6 @@ void ManagerAdmin::PrintLOG()
 	for (int i = 0; i < listAccount.size(); i++) {
 		data += listAccount[i].toString();
 	}
-	cout << "Successful Data Export, Please Check The Folder F:/Log.txt" << endl;
+	cout << "Successful Data Export, Please Check The Folder" << endl;
 	PrintLog::getInsatance()->WriteLog(data, "Data");
 }

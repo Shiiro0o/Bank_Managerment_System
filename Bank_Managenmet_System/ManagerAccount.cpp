@@ -19,6 +19,13 @@ bool ManagerAccount::checkDataList(std::string id)
 
 ManagerAccount::ManagerAccount()
 {
+	Customer cus("Cus01", "Anhht", "VietName", "1231231231", "nothing@mail.com");
+	Account acc01("Acc01", cus, "Anhht", "123", TypeAccount(1000000, 100000));
+	listAccount.push_back(acc01);
+
+	Customer cus02("Cus02", "HuyBD", "VietNam", "1231231231", "nothing@mail.com");
+	Account acc02("Acc02", cus02, "HuyBD", "123", TypeAccount(1000000, 100000));
+	listAccount.push_back(acc02);
 }
 
 void ManagerAccount::addcount()

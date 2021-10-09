@@ -24,7 +24,7 @@ PrintLog* PrintLog::getInsatance()
 void PrintLog::WriteLog(string data,string nameFile)
 {
 	ofstream of;
-	of.open("D:/HUBT/project/"+nameFile+".txt", ios::out);
+	of.open("D:/"+nameFile+".txt", ios::out);
 	of << data;
 	of.close();
 }
